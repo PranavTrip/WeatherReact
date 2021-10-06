@@ -2,9 +2,19 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Demo of this project
+
+
+https://user-images.githubusercontent.com/70514712/136246369-57ab1d9f-76a5-4335-83a1-f084df0ed617.mp4
+
+
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm i`
+
+Downloads all the required dependencies to package.json.
 
 ### `npm start`
 
