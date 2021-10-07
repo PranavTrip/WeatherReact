@@ -1,23 +1,22 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "./index.css";
- 
+
 const App = () => {
   const [city, setCity] = useState(null);
   const [search, setSearch] = useState("Kanpur");
- 
+
+  const fetchAPI = async () => {
+    const response =
+      await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=4d28416c98b1d0202c8b499d4b810234
+    `);
+    const resJSON = await response.json();
+    setCity(resJSON);
+  };
   useEffect(() => {
-    const fetchAPI = async () => {
-      const response =
-        await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=4d28416c98b1d0202c8b499d4b810234
-      `);
-      const resJSON = await response.json();
-      // console.log(resJSON);
-      setCity(resJSON.main);
-    };
     fetchAPI();
-  }, [search]);
- 
+  }, []);
+
   return (
     <>
       <div className="container">
@@ -36,19 +35,30 @@ const App = () => {
                     placeholder="Search Your City Here"
                     onChange={(event) => setSearch(event.target.value)}
                   />
-                  <i class="fa fa-search search-btn"></i>
+                  <button
+                    type="button"
+                    class="btn btn-primary mx-1"
+                    onClick={() => fetchAPI()}
+                  >
+                    Search
+                  </button>
                 </div>
- 
+
                 {city ? (
                   <div>
-                    <h3 className="text-center my-3 city-desc"> {search} </h3>
-                    <h2 className="text-center my-5 temp-desc">{city.temp} °cel</h2>
+                    <h3 className="text-center my-3 city-desc">
+                      {" "}
+                      {city.name}{" "}
+                    </h3>
+                    <h2 className="text-center my-5 temp-desc">
+                      {city.main.temp} °cel
+                    </h2>
                     <div className="mt-10 text-center">
                       <span className="m-2 text-center min-temp d-inline-block">
-                        | Minimum Temperature:{city.temp_min} °cel |
+                        | Minimum Temperature:{city.main.temp_min} °cel |
                       </span>
                       <span className="m-2 text-center max-temp d-inline-block">
-                        | Maximum Temperature:{city.temp_max} °cel |
+                        | Maximum Temperature:{city.main.temp_max} °cel |
                       </span>
                     </div>
                   </div>
@@ -65,6 +75,5 @@ const App = () => {
     </>
   );
 };
- 
+
 export default App;
- 
