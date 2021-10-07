@@ -6,10 +6,6 @@
 }
 
 .card {
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  width: 50%;
   height: 500px;
   background: url("https://www-cdn.eumetsat.int/files/styles/16_9_large/s3/2020-06/ASpot_Weather.jpg?h=d1cb525d&itok=lvYWh_W8")
     no-repeat center center fixed;
