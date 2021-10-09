@@ -16,6 +16,7 @@ const App = () => {
   };
   useEffect(() => {
     fetchAPI();
+    // eslint-disable-next-line
   }, []);
 
   return (
@@ -38,7 +39,7 @@ const App = () => {
                   />
                   <button
                     type="button"
-                    class="btn btn-primary mx-1"
+                    className="btn btn-primary mx-1"
                     onClick={() => fetchAPI()}
                   >
                     Search
@@ -47,10 +48,7 @@ const App = () => {
 
                 {city ? (
                   <div>
-                    <h3 className="text-center my-3 city-desc">
-                      {" "}
-                      {city.name}{" "}
-                    </h3>
+                    <h3 className="text-center my-3 city-desc">{city.name}</h3>
                     <h2 className="text-center my-5 temp-desc">
                       {city.main.temp} °cel
                     </h2>
