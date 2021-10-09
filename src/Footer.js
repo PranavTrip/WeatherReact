@@ -4,7 +4,7 @@ import "./Footer.css"
 function Footer() {
     return (
     <footer>
-        <p>Made with ❤️ by <a href="https://pranavtrip.github.io/Pranav/">Pranav</a> & Team.</p>
+        <p>Made with ❤️ by <a href="https://pranavtrip.github.io/Pranav/" target="_blank">Pranav</a> & Team.</p>
     </footer>
     )
 }
