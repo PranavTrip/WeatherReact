@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "./index.css";
+import Footer from "./Footer";
 
 const App = () => {
   const [city, setCity] = useState(null);
@@ -72,6 +73,7 @@ const App = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };
