@@ -2,40 +2,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+  font-family: "Poppins", sans-serif;
 }
 
-.card {
-  height: 500px;
-  background: url("https://www-cdn.eumetsat.int/files/styles/16_9_large/s3/2020-06/ASpot_Weather.jpg?h=d1cb525d&itok=lvYWh_W8")
-    no-repeat center center fixed;
+.card-main {
+  height: 557px;
+  width: 900px;
+  background: url(./Images/mike-erskine-BWqinEVjUKo-unsplash1.jpg) no-repeat;
   background-size: cover;
-}
-
-.search-btn {
-  margin: 6px;
-  padding: 6px;
-  color: white;
-}
-
-.city-desc {
-  color: white;
-}
-.temp-desc {
-  color: white;
-}
-.min-temp {
-  color: black;
-  font-weight: bold;
-  font-size: 14px;
-}
-.max-temp {
-  color: black;
-  font-weight: bold;
-  font-size: 14px;
-}
-.error{
-    color: white;
-    font-size: 20px;
-    text-transform: capitalize;
+  margin: 0 auto;
+  position: relative;
+  right: 21%;
+  /* box-shadow: -3px -2px 29px -3px rgba(0, 0, 0, 0.36);
+   */
+  box-shadow: -3px -2px 39px -16px rgba(0, 0, 0, 0.67);
 }
