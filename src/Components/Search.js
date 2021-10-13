@@ -1,4 +1,5 @@
 import React from "react";
+import { FaSearch } from "react-icons/fa";
 
 const Search = ({ setSearch, fetchAPI }) => {
   return (
@@ -7,17 +8,21 @@ const Search = ({ setSearch, fetchAPI }) => {
         <input
           type="text"
           className="form-control"
+          id="city-search"
           aria-label="Sizing example input"
           aria-describedby="inputGroup-sizing-default"
           placeholder="Enter city name"
-          onChange={(event) => setSearch(event.target.value)}
+        // onChange={(event) => setSearch(event.target.value)}
         />
         <button
           type="button"
           className="btn btn-primary mx-1"
-          onClick={() => fetchAPI()}
+          onClick={() => {
+            setSearch(document.getElementById('city-search').value)
+            fetchAPI()
+          }}
         >
-          Get Weather Report
+          < FaSearch />
         </button>
       </div>
     </>

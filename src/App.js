@@ -11,8 +11,7 @@ const App = () => {
 
   const fetchAPI = async () => {
     const response =
-      await fetch(`https://api.weatherapi.com/v1/forecast.json?key=959fbc882edd4522b59134540213007&q=${search}
-    `);
+      await fetch(`https://api.weatherapi.com/v1/forecast.json?key=959fbc882edd4522b59134540213007&q=${search}`);
     const resJSON = await response.json();
     setCity(resJSON);
   };
@@ -23,9 +22,9 @@ const App = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container main-body">
         <div className="row mx-0">
-          <div className="col-12 col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+          <div className="center-content col-12 col-md-8 col-lg-6 offset-md-2">
             <Search setSearch={setSearch} fetchAPI={fetchAPI} />
             <Card city={city} />
           </div>
