@@ -5,18 +5,18 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 # Demo of this project
 
 
-https://user-images.githubusercontent.com/70514712/136246369-57ab1d9f-76a5-4335-83a1-f084df0ed617.mp4
+https://user-images.githubusercontent.com/83128425/139425668-a4aef607-cbba-451f-be03-5ce5cd0e6b27.mp4
 
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm i`
+### `npm i` or `npm install`
 
 Downloads all the required dependencies to package.json.
 
-### `npm start`
+### `npm start` or `npm run start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
